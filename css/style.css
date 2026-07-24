@@ -379,6 +379,86 @@ h6 span::before {
     text-align: center;
 }
 
+/* Start rotating sustainability styling */
+
+.rotating-text-wrapper h6 {
+    font-size: 2.5em;
+    padding: 0.3em;
+    margin: 0;
+    color: #fff;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+h6:nth-child(1) {
+  background-color: #ed6335;
+  animation-name: rotating-text-1;
+}
+
+@keyframes rotating-text-1 {
+    0% {
+        transform: translateY(200%);
+    }
+    33% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    34%{
+        opacity: 0;
+    }
+}
+
+h6:nth-child(2) {
+  background-color: #ed6335;
+  animation-name: rotating-text-2;
+}
+
+@keyframes rotating-text-2 {
+  33% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  66% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  67%{
+    opacity: 0;
+  }
+}
+
+h6:nth-child(3) {
+    background-color: #ed6335;
+    animation-name: rotating-text-3;
+}
+
+@keyframes rotating-text-3 {
+  66% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  99% {
+    transform: translateY(-200%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-100%);
+    opacity: 0;   
+  }
+}
+
+.rotating-text-wrapper {
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* End rotating sustainability styling */
+
 #sustainability_wrapper {
     background-image: url(../images/background1.svg);
     min-height: 300px;
